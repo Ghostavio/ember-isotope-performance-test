@@ -1,0 +1,1 @@
+install ember-cli with `npm install -g ember-cli` and run `ember-server` to start the server

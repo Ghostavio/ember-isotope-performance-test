@@ -7,7 +7,8 @@ var ItemsView = Ember.View.extend({
         Ember.run.scheduleOnce('afterRender', this, function () {
             this.$().isotope({
                 itemSelector: '.item',
-                animationEngine : 'css'
+                animationEngine : 'css',
+                layoutMode: 'vertical'
             });
         });
     }

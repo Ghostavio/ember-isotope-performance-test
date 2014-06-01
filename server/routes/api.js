@@ -16,7 +16,7 @@ var generateApplications = function(amount) {
 
         apps.push({
             id: i,
-            text: text.join(),
+            text: text.join(' '),
             color: colors[Math.floor(Math.random() * colors.length)],
             smallNum: Math.floor(Math.random() * 5) + 1,
             bigNum: Math.floor(Math.random() * 1000) + 1

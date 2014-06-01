@@ -3,17 +3,17 @@ html, body {
 }
 
 .bs-filters {
-	position: absolute;
-	top: -110px;
+	/*position: absolute;
+	top: -110px;*/
 }
 
 .items-list {
-	margin-top: 140px;
+	/*margin-top: 140px;*/
 }
 
 .items-list h2 {
-	position: absolute;
-	top: -70px;
+	/*position: absolute;
+	top: -70px;*/
 }
 
 .item {
@@ -21,6 +21,11 @@ html, body {
 	padding: 5px;
 	margin: 10px;
 	list-style: none;
+	transition: all .5s ease;
+	-webkit-transition: all .2s ease;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
 }
 
 .red {
@@ -41,4 +46,21 @@ html, body {
 
 .purple {
 	color: purple;
+}
+
+.hide-non-filtered .item {
+	display: none;
+}
+
+.show-red .item, .show-blue .item, .show-green .item, .show-yellow .item, .show-purple .item {
+	opacity: 0;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+
+.show-red .red, .show-blue .blue, .show-green .green, .show-yellow .yellow, .show-purple .purple {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	display: block;
 }

@@ -5,14 +5,17 @@ var CheckboxbuttonsView = Ember.View.extend({
 	click: function() {
 		var self = this;
 		window.setTimeout(function(){
-			var finalString = '';
-			self.$().parent().find('.active').each(function(i){
-				if(i > 0) {
-					finalString += ', ';
-				}
-				finalString += '.'+this.innerText.toLowerCase();
+			self.$().parent().find('.active').each(function(){
+				self.get('controller').send('filter', this.innerText.toLowerCase());
 			});
-			self.get('controller').send('filter', finalString);
+			self.$().parent().find(':not(.active)').each(function(){
+				self.get('controller').send('unfilter', this.innerText.toLowerCase());
+			});
+			if(self.$().parent().find('.btn-default.active').length > 0) {
+				$('html').addClass('hide-non-filtered');
+			} else {
+				$('html').removeClass('hide-non-filtered');
+			}
 		});
 	}
 });

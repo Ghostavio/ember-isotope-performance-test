@@ -1,8 +1,10 @@
 var ItemsController = Ember.Controller.extend({
 	actions: {
-		filter: function(params) {
-			window.console.log(params);
-			$('.items-list').isotope({ filter: params });
+		filter: function(param) {
+			$('html').addClass('show-'+param);
+		},
+		unfilter: function(param) {
+			$('html').removeClass('show-'+param);
 		}
 	}
 });

@@ -6,10 +6,12 @@ var CheckboxbuttonsView = Ember.View.extend({
 		var self = this;
 		window.setTimeout(function(){
 			self.$().parent().find('.active').each(function(){
-				self.get('controller').send('filter', this.innerText.toLowerCase());
+				window.console.log(this);
+				window.console.log($(this));
+				self.get('controller').send('filter', $(this).text().trim().toLowerCase());
 			});
 			self.$().parent().find(':not(.active)').each(function(){
-				self.get('controller').send('unfilter', this.innerText.toLowerCase());
+				self.get('controller').send('unfilter', $(this).text().trim().toLowerCase());
 			});
 			if(self.$().parent().find('.btn-default.active').length > 0) {
 				$('html').addClass('hide-non-filtered');

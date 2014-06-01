@@ -30,7 +30,7 @@ app.import('vendor/ic-ajax/dist/named-amd/main.js', {
   ]
 });
 
-app.import('vendor/isotope/dist/isotope.pkgd.js');
+// app.import('vendor/isotope/dist/isotope.pkgd.js');
 app.import('vendor/ember-addons.bs_for_ember/dist/js/bs-core.min.js');
 app.import('vendor/ember-addons.bs_for_ember/dist/js/bs-alert.min.js');
 app.import('vendor/ember-addons.bs_for_ember/dist/js/bs-button.min.js');

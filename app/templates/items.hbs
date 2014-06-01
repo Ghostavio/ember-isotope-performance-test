@@ -1,4 +1,7 @@
 <div class="bs-filters">
+    <div class="live-search">
+    	{{input type="text" value=searchText placeholder="live search"}}
+    </div>
     <div class="btn-group" id="weekdays" data-toggle="buttons">
 		{{#view 'checkboxbuttons'}}
 		    {{input type="checkbox"}}
@@ -25,6 +28,6 @@
 
 <h2>Items</h2>
 
-{{#each content}}
+{{#each filteredContent}}
 <li {{bind-attr class=':item color'}}>{{text}}</li>
 {{/each}}

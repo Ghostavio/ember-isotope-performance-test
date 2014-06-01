@@ -1,19 +1,28 @@
 html, body {
   margin: 20px;
 }
-
+/* Isotope position absolute fixes bla bla bla
 .bs-filters {
-	/*position: absolute;
-	top: -110px;*/
+	position: absolute;
+	top: -110px;
 }
 
 .items-list {
-	/*margin-top: 140px;*/
+	margin-top: 140px;
 }
 
 .items-list h2 {
-	/*position: absolute;
-	top: -70px;*/
+	position: absolute;
+	top: -70px;
+}
+*/
+
+.live-search {
+	margin: 0 0 15px;
+}
+
+.live-search input {
+	width: 250px;
 }
 
 .item {
